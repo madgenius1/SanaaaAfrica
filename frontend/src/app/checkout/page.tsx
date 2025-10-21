@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { CartItem } from '../types';
+import Link from 'next/link';
 
 // Mock cart data - in production, use Context API or state management
 const mockCartItems: CartItem[] = [
@@ -91,9 +92,9 @@ export default function CheckoutPage() {
           </svg>
           <h2 className="font-heading text-navy mb-4">Your cart is empty</h2>
           <p className="text-navy/70 mb-8">Add some beautiful handcrafted items to get started!</p>
-          <a href="/#products" className="btn btn-primary">
+          <Link href="/#products" className="btn btn-primary">
             Continue Shopping
-          </a>
+          </Link>
         </div>
       </div>
     );

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About Us | Sanaa African Curios',
@@ -110,7 +111,7 @@ export default function AboutPage() {
               <div className="bg-rust/5 rounded-xl p-6">
                 <h4 className="font-heading text-rust text-2xl mb-2">250+ Artisans</h4>
                 <p className="text-navy/70">
-                  We've partnered with over 250 skilled artisans across Kenya, providing sustainable income 
+                  We have partnered with over 250 skilled artisans across Kenya, providing sustainable income 
                   and preserving traditional crafts.
                 </p>
               </div>
@@ -214,12 +215,12 @@ export default function AboutPage() {
             artisan communities today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/#products" className="btn btn-primary">
+            <Link href="/#products" className="btn btn-primary">
               Shop Collections
-            </a>
-            <a href="/contact" className="btn btn-outline">
+            </Link>
+            <Link href="/contact" className="btn btn-outline">
               Get in Touch
-            </a>
+            </Link>
           </div>
         </div>
       </section>

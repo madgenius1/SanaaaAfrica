@@ -59,7 +59,7 @@ export default function ImpactStats() {
         <div className="text-center mb-12">
           <h2 className="font-heading text-gray-900 mb-4">Our Impact</h2>
           <p className="text-xl text-gray-900/80 max-w-2xl mx-auto">
-            Together, we're making a difference in the lives of artisans and their communities
+            Together, we&apos;re making a difference in the lives of artisans and their communities
           </p>
         </div>
 

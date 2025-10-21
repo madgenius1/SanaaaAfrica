@@ -30,7 +30,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
       <div className="bg-ivory rounded-2xl p-8 md:p-12 shadow-lg relative">
         {/* Quote Icon */}
         <div className="absolute top-6 left-6 text-rust/20 text-6xl font-heading">
-          "
+          &apos;&apos;
         </div>
 
         <div className="relative z-10">

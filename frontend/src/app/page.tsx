@@ -3,6 +3,7 @@ import ProductCard from './components/ProductCard';
 import TestimonialSlider from './components/TestimonialSlider';
 import ImpactStats from './components/ImpactStats';
 import { Product, Testimonial } from './types';
+import Link from 'next/link';
 
 // Default mock data for local development without backend
 const mockProducts: Product[] = [
@@ -230,7 +231,7 @@ export default function HomePage() {
 
   const featuredProducts = products.filter(p => p.featured);
   const jewelry = products.filter(p => p.tags.includes('jewelry'));
-  const garments = products.filter(p => p.tags.includes('garments'));
+  // const garments = products.filter(p => p.tags.includes('garments'));
 
   return (
     <>
@@ -302,12 +303,12 @@ export default function HomePage() {
             Every purchase preserves cultural heritage and provides sustainable income for artisan families across Kenya.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/#products" className="btn bg-white text-rust hover:bg-ivory text-gray-950">
+            <Link href="/#products" className="btn bg-white text-rust hover:bg-ivory text-gray-950">
               Shop Now
-            </a>
-            <a href="/about" className="btn border-2 border-black text-gray-950 hover:bg-white hover:text-rust">
+            </Link>
+            <Link href="/about" className="btn border-2 border-black text-gray-950 hover:bg-white hover:text-rust">
               Learn Our Story
-            </a>
+            </Link>
           </div>
         </div>
       </section>

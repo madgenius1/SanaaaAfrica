@@ -27,7 +27,7 @@ export default function Hero() {
             </h1>
             
             <p className="text-lg text-navy/70 leading-relaxed max-w-xl">
-              Discover unique, handmade curios from Kenya's finest artisans. 
+              Discover unique, handmade curios from Kenya&apos;s finest artisans. 
               Every piece tells a story, preserves tradition, and empowers communities.
             </p>
             
