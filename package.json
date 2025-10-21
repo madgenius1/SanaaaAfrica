@@ -2,11 +2,17 @@
   "name": "sanaaafrica",
   "version": "0.1.0",
   "private": true,
+   "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "frontend:dev": "pnpm --filter frontend dev",
+    "backend:dev": "pnpm --filter backend dev",
+    "backend:seed": "pnpm --filter backend seed",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck"
   },
   "dependencies": {
     "react": "19.1.0",
@@ -14,7 +20,8 @@
     "next": "15.5.6"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -23,5 +30,9 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.6",
     "@eslint/eslintrc": "^3"
+  },
+   "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
   }
 }
