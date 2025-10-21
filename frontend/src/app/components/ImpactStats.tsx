@@ -47,7 +47,7 @@ export default function ImpactStats() {
   ];
 
   return (
-    <section className="section-padding bg-linear-to-br from-navy to-navy/90 text-white relative overflow-hidden">
+    <section className="section-padding bg-linear-to-br from-navy to-navy/90 text-gray-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -57,8 +57,8 @@ export default function ImpactStats() {
 
       <div className="container-custom relative z-10">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-white mb-4">Our Impact</h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+          <h2 className="font-heading text-gray-900 mb-4">Our Impact</h2>
+          <p className="text-xl text-gray-900/80 max-w-2xl mx-auto">
             Together, we're making a difference in the lives of artisans and their communities
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function ImpactStats() {
               <div className="text-4xl md:text-5xl font-heading font-bold mb-2">
                 {stat.value}
               </div>
-              <div className="text-white/70 font-accent">
+              <div className="text-gray-900/70 font-accent">
                 {stat.label}
               </div>
             </div>
@@ -87,19 +87,19 @@ export default function ImpactStats() {
         <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
           <div>
             <h4 className="font-heading font-semibold text-lg mb-2">Sustainable Sourcing</h4>
-            <p className="text-white/70 text-sm">
+            <p className="text-gray-900/70 text-sm">
               All materials are ethically and sustainably sourced from local suppliers
             </p>
           </div>
           <div>
             <h4 className="font-heading font-semibold text-lg mb-2">Fair Wages</h4>
-            <p className="text-white/70 text-sm">
+            <p className="text-gray-900/70 text-sm">
               Artisans receive fair compensation, well above local minimum wage
             </p>
           </div>
           <div>
             <h4 className="font-heading font-semibold text-lg mb-2">Community Development</h4>
-            <p className="text-white/70 text-sm">
+            <p className="text-gray-900/70 text-sm">
               10% of profits fund education and healthcare in artisan communities
             </p>
           </div>

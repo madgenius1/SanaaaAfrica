@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Libre+Franklin:wght@400;500;600;700&display=swap');
 
-@tailwind utilities;
 
+@import "tailwindcss";
+
+@reference "tailwindcss/utilities";
+
+
+/* ---------- COLOR VARIABLES ---------- */
 :root {
   --rust: #D8712A;
   --terracotta: #C75B3A;
@@ -11,102 +16,117 @@
   --burgundy: #6B1F2E;
   --navy: #0B233F;
 }
-  body {
-    @apply bg-ivory text-navy font-body antialiased;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold;
-  }
-  
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
-  }
-  
-  h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
-  }
-  
-  h3 {
-    @apply text-2xl md:text-3xl;
-  }
-  
-  h4 {
-    @apply text-xl md:text-2xl;
+
+/* ---------- BASE STYLES ---------- */
+@layer base {
+  /* Avoid applying unknown classes like border-gray-200 */
+  * {
+    border-color: rgb(229, 231, 235);
   }
 
+  body {
+    background-color: var(--ivory);
+    color: var(--navy);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
+  h2 { @apply text-3xl md:text-4xl lg:text-5xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
+}
+
+/* ---------- COMPONENTS ---------- */
 @layer components {
   .btn {
-    @apply px-6 py-3 font-accent font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply px-6 py-3 font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
-  
+
   .btn-primary {
-    @apply bg-rust text-white hover:bg-terracotta focus:ring-rust;
+    background-color: var(--rust);
+    color: #fff;
   }
-  
+  .btn-primary:hover {
+    background-color: var(--terracotta);
+  }
+
   .btn-secondary {
-    @apply bg-emerald text-white hover:bg-emerald/90 focus:ring-emerald;
+    background-color: var(--emerald);
+    color: #fff;
   }
-  
+  .btn-secondary:hover {
+    filter: brightness(0.9);
+  }
+
   .btn-outline {
-    @apply border-2 border-navy text-navy hover:bg-navy hover:text-white focus:ring-navy;
+    border: 2px solid var(--navy);
+    color: var(--navy);
   }
-  
+  .btn-outline:hover {
+    background-color: var(--navy);
+    color: #fff;
+  }
+
   .card {
     @apply bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl;
   }
-  
+
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
+
   .section-padding {
     @apply py-12 md:py-16 lg:py-24;
   }
-  
+
   .text-balance {
     text-wrap: balance;
   }
 }
 
+/* ---------- UTILITIES ---------- */
 @layer utilities {
-  .animate-fade-in {
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  
-  .animate-slide-up {
-    animation: slideUp 0.5s ease-out;
-  }
-  
-  .animate-slide-in {
-    animation: slideIn 0.3s ease-out;
-  }
+  .animate-fade-in { animation: fadeIn 0.5s ease-in-out; }
+  .animate-slide-up { animation: slideUp 0.5s ease-out; }
+  .animate-slide-in { animation: slideIn 0.3s ease-out; }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #FAF5EB;
-}
-
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--ivory); }
 ::-webkit-scrollbar-thumb {
-  background: #D8712A;
+  background: var(--rust);
   border-radius: 5px;
 }
+::-webkit-scrollbar-thumb:hover { background: var(--terracotta); }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #C75B3A;
-}
+/* ---------- MISC ---------- */
+.skeleton { @apply animate-pulse bg-gray-200 rounded; }
 
-/* Loading skeleton */
-.skeleton {
-  @apply animate-pulse bg-gray-200 rounded;
-}
-
-/* Focus visible for accessibility */
 *:focus-visible {
-  @apply outline-2 outline-offset-2 outline-rust;
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-10px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }

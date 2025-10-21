@@ -64,7 +64,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-rust rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-gray-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-emerald rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-gray-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-sage rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-gray-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -144,8 +144,8 @@ export default function AboutPage() {
       <section className="section-padding bg-linear-to-br from-navy to-navy/90 text-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-white mb-4">Meet Some of Our Artisans</h2>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto">
+            <h2 className="font-heading text-gray-950 mb-4">Meet Some of Our Artisans</h2>
+            <p className="text-xl text-gray-800/80 max-w-2xl mx-auto">
               The talented individuals behind every handcrafted piece
             </p>
           </div>
@@ -161,9 +161,9 @@ export default function AboutPage() {
                   sizes="160px"
                 />
               </div>
-              <h3 className="font-heading text-xl mb-2">Mama Nashipae</h3>
-              <p className="text-white/70 text-sm mb-2">Beadwork Master</p>
-              <p className="text-white/60 text-sm">
+              <h3 className="font-heading text-black text-xl mb-2">Mama Nashipae</h3>
+              <p className="text-gray-950/70 text-sm mb-2">Beadwork Master</p>
+              <p className="text-gray-900/60 text-sm">
                 30+ years creating traditional Maasai jewelry in Kajiado County
               </p>
             </div>
@@ -178,9 +178,9 @@ export default function AboutPage() {
                   sizes="160px"
                 />
               </div>
-              <h3 className="font-heading text-xl mb-2">John Ombati</h3>
-              <p className="text-white/70 text-sm mb-2">Soapstone Carver</p>
-              <p className="text-white/60 text-sm">
+              <h3 className="font-heading text-black text-xl mb-2">John Ombati</h3>
+              <p className="text-gray-950/70 text-sm mb-2">Soapstone Carver</p>
+              <p className="text-gray-900/60 text-sm">
                 Master carver from Kisii, specializing in wildlife sculptures
               </p>
             </div>
@@ -195,9 +195,9 @@ export default function AboutPage() {
                   sizes="160px"
                 />
               </div>
-              <h3 className="font-heading text-xl mb-2">Grace Wanjiru</h3>
-              <p className="text-white/70 text-sm mb-2">Basket Weaver</p>
-              <p className="text-white/60 text-sm">
+              <h3 className="font-heading text-black text-xl mb-2">Grace Wanjiru</h3>
+              <p className="text-gray-950/70 text-sm mb-2">Basket Weaver</p>
+              <p className="text-gray-900/60 text-sm">
                 Award-winning weaver leading a cooperative of 50 women
               </p>
             </div>

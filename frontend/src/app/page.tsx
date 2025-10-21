@@ -13,7 +13,7 @@ const mockProducts: Product[] = [
     price: 45.00,
     currency: 'USD',
     images: [{
-      url: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80',
+      url: '/productImages/imageOne.png',
       alt: 'Colorful Maasai beaded necklace with intricate geometric patterns in red, blue, and white'
     }],
     shortDescription: 'Hand-beaded traditional Maasai necklace with vibrant colors and intricate patterns.',
@@ -40,8 +40,8 @@ const mockProducts: Product[] = [
     price: 32.00,
     currency: 'USD',
     images: [{
-      url: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80',
-      alt: 'Colorful striped kikoy fabric wrap in coastal colors of blue, turquoise and white'
+      url: '/productImages/imageTwo.png',
+      alt: 'Colorful striped kikoi fabric wrap in coastal colors of blue, turquoise and white'
     }],
     shortDescription: 'Versatile cotton kikoy wrap in coastal-inspired colors, perfect for beach or home.',
     longDescription: 'Traditional Kenyan kikoy made from soft cotton with vibrant stripes.',
@@ -67,7 +67,7 @@ const mockProducts: Product[] = [
     price: 55.00,
     currency: 'USD',
     images: [{
-      url: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800&q=80',
+      url: '/productImages/imageThree.png',
       alt: 'Handwoven sisal basket with natural brown and black geometric patterns'
     }],
     shortDescription: 'Handwoven kiondo basket made from natural sisal with leather handles.',
@@ -94,10 +94,10 @@ const mockProducts: Product[] = [
     price: 28.00,
     currency: 'USD',
     images: [{
-      url: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80',
-      alt: 'Pair of carved soapstone birds in natural cream and terracotta tones'
+      url: '/productImages/imageFour.png',
+      alt: 'Pair of carved soapstone lovers in natural cream and terracotta tones'
     }],
-    shortDescription: 'Hand-carved Kisii soapstone love birds symbolizing unity and partnership.',
+    shortDescription: 'Hand-carved Kisii soapstone lovers symbolizing unity and partnership.',
     longDescription: 'Beautiful decorative soapstone sculpture carved by Kisii artisans.',
     backstory: 'Kisii soapstone has been carved for centuries in western Kenya.',
     artisan: {
@@ -121,7 +121,7 @@ const mockProducts: Product[] = [
     price: 68.00,
     currency: 'USD',
     images: [{
-      url: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&q=80',
+      url: '/productImages/imageFive.png',
       alt: 'Flowing cotton dress with vibrant batik print in warm earth tones'
     }],
     shortDescription: 'Flowing cotton dress featuring authentic African batik print designs.',
@@ -140,7 +140,7 @@ const mockProducts: Product[] = [
     price: 42.00,
     currency: 'USD',
     images: [{
-      url: 'https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80',
+      url: '/productImages/imageSix.png',
       alt: 'Hand-carved wooden bowl with smooth natural finish'
     }],
     shortDescription: 'Hand-carved wooden bowl from indigenous Kenyan hardwood.',
@@ -159,7 +159,7 @@ const mockProducts: Product[] = [
     price: 52.00,
     currency: 'USD',
     images: [{
-      url: 'https://images.unsplash.com/photo-1603487742131-4160ec999306?w=800&q=80',
+      url: '/productImages/imageSeven.png',
       alt: 'Handmade leather sandals with woven straps in natural tan color'
     }],
     shortDescription: 'Handcrafted leather sandals with traditional Maasai beaded detailing.',
@@ -178,7 +178,7 @@ const mockProducts: Product[] = [
     price: 85.00,
     currency: 'USD',
     images: [{
-      url: 'https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=800&q=80',
+      url: '/productImages/imageEight.png',
       alt: 'Large woven wall hanging with geometric patterns in natural and dyed fibers'
     }],
     shortDescription: 'Large woven wall art featuring traditional patterns in natural fibers.',
@@ -297,15 +297,15 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="section-padding bg-linear-to-br from-rust to-terracotta text-white">
         <div className="container-custom text-center">
-          <h2 className="font-heading mb-6">Support African Artisans</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
+          <h2 className="font-heading mb-6 text-gray-950">Support African Artisans</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-800/90">
             Every purchase preserves cultural heritage and provides sustainable income for artisan families across Kenya.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/#products" className="btn bg-white text-rust hover:bg-ivory">
+            <a href="/#products" className="btn bg-white text-rust hover:bg-ivory text-gray-950">
               Shop Now
             </a>
-            <a href="/about" className="btn border-2 border-white text-white hover:bg-white hover:text-rust">
+            <a href="/about" className="btn border-2 border-black text-gray-950 hover:bg-white hover:text-rust">
               Learn Our Story
             </a>
           </div>
