@@ -11,12 +11,6 @@
   --burgundy: #6B1F2E;
   --navy: #0B233F;
 }
-
-@layer base {
-  * {
-    @apply border-gray-200;
-  }
-  
   body {
     @apply bg-ivory text-navy font-body antialiased;
   }
@@ -40,7 +34,6 @@
   h4 {
     @apply text-xl md:text-2xl;
   }
-}
 
 @layer components {
   .btn {
