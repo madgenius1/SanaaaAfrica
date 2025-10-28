@@ -25,7 +25,7 @@ export default function Navbar() {
             </div>
             <div className="hidden sm:block">
               <span className="text-xl font-heading font-bold text-navy">African</span>
-              <span className="block text-xs text-emerald font-accent">Mapambi Creations</span>
+              <span className="block text-xs text-emerald font-accent">Mapambo Creations</span>
             </div>
           </Link>
 
