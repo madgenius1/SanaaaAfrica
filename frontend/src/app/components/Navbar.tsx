@@ -19,10 +19,9 @@ export default function Navbar() {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container-custom">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <div className="w-12 h-12 bg-rust rounded-full flex items-center justify-center">
-              <span className="text-white font-heading text-2xl font-bold">S</span>
+              <span className="text-black font-heading text-2xl font-bold">S</span>
             </div>
             <div className="hidden sm:block">
               <span className="text-xl font-heading font-bold text-navy">Sanaa</span>
