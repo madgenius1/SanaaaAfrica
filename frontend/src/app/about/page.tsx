@@ -16,8 +16,19 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-navy mb-6">Our Story</h1>
             <p className="text-xl text-navy/80 leading-relaxed">
-              Sanaa African Curios was born from a simple belief: that every handcrafted piece 
+              African Mapamno Creation was born from a simple belief: that every handcrafted piece 
               tells a story worth sharing, and every artisan deserves fair recognition for their craft.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* Artisan Section */}
+      <section className="section-padding bg-linear-to-br from-navy to-navy/90 text-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-gray-950 mb-4">The Artisan Community</h2>
+            <p className="text-xl text-gray-800/80 max-w-2xl mx-auto">
+              The talented individuals behind every handcrafted piece
             </p>
           </div>
         </div>
@@ -35,12 +46,10 @@ export default function AboutPage() {
                   livelihoods for artisans while preserving cultural heritage for future generations.
                 </p>
                 <p>
-                  Every purchase directly supports artisan families, funds community development 
-                  projects, and helps keep traditional techniques alive in an increasingly modern world.
+                  Every purchase directly supports artisan families and helps keep traditional techniques alive in an increasingly modern world.
                 </p>
                 <p>
-                  We believe in fair trade, ethical sourcing, and transparent partnerships. Our artisans 
-                  receive fair wages, work in safe conditions, and maintain ownership of their designs 
+                  We believe in fair trade, ethical sourcing, and transparent partnerships. Our artisans work independently and maintain ownership of their designs 
                   and intellectual property.
                 </p>
               </div>
@@ -141,70 +150,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="section-padding bg-linear-to-br from-navy to-navy/90 text-white">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-gray-950 mb-4">Meet Some of Our Artisans</h2>
-            <p className="text-xl text-gray-800/80 max-w-2xl mx-auto">
-              The talented individuals behind every handcrafted piece
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-rust">
-                <Image
-                  src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80"
-                  alt="Mama Nashipae, beadwork artisan"
-                  fill
-                  className="object-cover"
-                  sizes="160px"
-                />
-              </div>
-              <h3 className="font-heading text-black text-xl mb-2">Mama Nashipae</h3>
-              <p className="text-gray-950/70 text-sm mb-2">Beadwork Master</p>
-              <p className="text-gray-900/60 text-sm">
-                30+ years creating traditional Maasai jewelry in Kajiado County
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-rust">
-                <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
-                  alt="John Ombati, soapstone carver"
-                  fill
-                  className="object-cover"
-                  sizes="160px"
-                />
-              </div>
-              <h3 className="font-heading text-black text-xl mb-2">John Ombati</h3>
-              <p className="text-gray-950/70 text-sm mb-2">Soapstone Carver</p>
-              <p className="text-gray-900/60 text-sm">
-                Master carver from Kisii, specializing in wildlife sculptures
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-rust">
-                <Image
-                  src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&q=80"
-                  alt="Grace Wanjiru, basket weaver"
-                  fill
-                  className="object-cover"
-                  sizes="160px"
-                />
-              </div>
-              <h3 className="font-heading text-black text-xl mb-2">Grace Wanjiru</h3>
-              <p className="text-gray-950/70 text-sm mb-2">Basket Weaver</p>
-              <p className="text-gray-900/60 text-sm">
-                Award-winning weaver leading a cooperative of 50 women
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <section className="section-padding bg-ivory">
