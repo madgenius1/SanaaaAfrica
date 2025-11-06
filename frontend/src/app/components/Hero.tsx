@@ -35,7 +35,7 @@ export default function Hero() {
                            This makes the Slideshow (right side) appear *above* the Content (left side) on mobile,
                            which is generally better for a hero image.
         */}
-        <div className="grid md:grid-cols-2 gap-12 items-center flex flex-col-reverse md:flex-row">
+        <div className="grid md:grid-cols-2 gap-12 items-center flex-col-reverse md:flex-row">
           
           {/*
             SECTION 1: Content (The original left section)
