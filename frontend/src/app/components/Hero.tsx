@@ -1,5 +1,20 @@
 import Link from 'next/link';
-import Image from 'next/image';
+// We don't need Image here anymore, as it's now in ImageSlideshow
+import ImageSlideshow from './ImageSlideshow'; // Import the new component (assuming it's in the same directory)
+
+// --- Typescript Safety: Define an explicit array of images for the slideshow ---
+// Note: If you have a separate file for types, import it instead of redefining.
+interface SlideImage {
+  src: string;
+  alt: string;
+}
+
+// Define your images here (or fetch them from an API/config)
+const heroImages: SlideImage[] = [
+  { src: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80", alt: "African jewelry and curios" },
+  { src: "https://images.unsplash.com/photo-1549488340-d93f7736f322?w=800&q=80", alt: "Handmade ceramic bowls" },
+  { src: "https://images.unsplash.com/photo-1533089309608-8f5223c6f4b6?w=800&q=80", alt: "Woven baskets and textiles" },
+];
 
 export default function Hero() {
   return (
@@ -11,10 +26,22 @@ export default function Hero() {
         }} />
       </div>
 
-      <div className="container-custom relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-6 animate-fade-in">
+      <div className="container-custom relative z-10 w-full">
+        {/*
+          Key Change:
+          md:grid-cols-2: Two columns on medium screens and up.
+          flex-col-reverse: The first child (Content) will appear on the bottom on small screens.
+                           The second child (Slideshow) will appear on top on small screens.
+                           This makes the Slideshow (right side) appear *above* the Content (left side) on mobile,
+                           which is generally better for a hero image.
+        */}
+        <div className="grid md:grid-cols-2 gap-12 items-center flex flex-col-reverse md:flex-row">
+          
+          {/*
+            SECTION 1: Content (The original left section)
+            This section will display on the LEFT on medium screens and ABOVE the slideshow on small screens due to flex-col-reverse.
+          */}
+          <div className="space-y-6 animate-fade-in order-2 md:order-1"> {/* order-2/order-1 is redundant due to flex-col-reverse/md:flex-row but makes intent explicit */}
             <div className="inline-block px-4 py-2 bg-emerald/10 rounded-full">
               <span className="text-emerald font-accent font-semibold text-sm">
                 ✨ Authentic • Handcrafted • Ethical
@@ -57,35 +84,14 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative h-[500px] md:h-[600px] animate-slide-in">
-            <div className="absolute inset-0 bg-linear-to-br from-rust/20 to-emerald/20 rounded-3xl transform rotate-3" />
-            <div className="absolute inset-0 overflow-hidden rounded-3xl shadow-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80"
-                alt="Beautiful handcrafted African jewelry and curios displayed on natural materials"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-            
-            {/* Floating badge */}
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-xl">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-emerald rounded-full flex items-center justify-center">
-                  <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-heading font-bold text-navy">Fair Trade</div>
-                  <div className="text-sm text-navy/60">Certified</div>
-                </div>
-              </div>
-            </div>
+          {/*
+            SECTION 2: Image Slideshow (The new right section)
+            This section will display on the RIGHT on medium screens and BELOW the content on small screens.
+          */}
+          <div className="order-1 md:order-2"> {/* order-1/order-2 is redundant due to flex-col-reverse/md:flex-row but makes intent explicit */}
+            <ImageSlideshow images={heroImages} intervalMs={5000} /> 
           </div>
+
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About Us | Sanaa African Curios',
+  title: 'About Us | African Mapambo Creations',
   description: 'Learn about our mission to preserve African culture and support artisan communities through fair trade handcrafted goods.',
 };
 
@@ -16,7 +16,7 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-navy mb-6">Our Story</h1>
             <p className="text-xl text-navy/80 leading-relaxed">
-              African Mapamno Creation was born from a simple belief: that every handcrafted piece 
+              African Mapambo Creations was born from a simple belief: that every handcrafted piece 
               tells a story worth sharing, and every artisan deserves fair recognition for their craft.
             </p>
           </div>
@@ -28,7 +28,7 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="font-heading text-gray-950 mb-4">The Artisan Community</h2>
             <p className="text-xl text-gray-800/80 max-w-2xl mx-auto">
-              The talented individuals behind every handcrafted piece
+              The talented artists behind we work with.
             </p>
           </div>
         </div>

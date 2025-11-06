@@ -11,11 +11,11 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-rust rounded-full flex items-center justify-center">
-                <span className="text-white font-heading text-xl font-bold">S</span>
+                <span className="text-white font-heading text-xl font-bold">A</span>
               </div>
               <div>
-                <span className="text-lg font-heading font-bold">Sanaa</span>
-                <span className="block text-xs text-sage font-accent">African Curios</span>
+                <span className="text-lg font-heading font-bold">African</span>
+                <span className="block text-xs text-sage font-accent">Mapambo Creations</span>
               </div>
             </div>
             <p className="text-sm text-ivory/80">
@@ -93,17 +93,6 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://tiktok.com/@sanaa_curios"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-rust transition-colors"
-                aria-label="TikTok"
-              >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
-                </svg>
-              </a>
-              <a
                 href="https://facebook.com/sanaacurios"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -134,7 +123,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-ivory/20 text-sm text-center text-ivory/60">
-          <p>&copy; {currentYear} Sanaa African Curios. All rights reserved.</p>
+          <p>&copy; {currentYear} African Mapambo Creations. All rights reserved.</p>
           <p className="mt-2">
             Made with love in Kenya 🇰🇪 | Shipping worldwide
           </p>
